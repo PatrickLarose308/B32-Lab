@@ -1,0 +1,16 @@
+#!/bin/bash
+
+read -p "Entrez une lettre ou un chiffre : " car
+case $car in
+	[[:lower:]])
+		echo "Lettre en minuscule"
+		;;
+	[[:upper:]])
+		echo "Lettre en majuscule"
+		;;
+	[[:digit:]])
+		echo "Chiffre"
+		;;
+	*)
+		echo "Autre caractère"
+esac
