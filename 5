@@ -1,0 +1,9 @@
+#!/bin/bash
+
+i=1
+while test $i -lt 6
+do
+	echo "Création du sous répertoire " $i
+	mkdir Dossier$i
+	i=$(($i+1))
+done
