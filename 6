@@ -1,3 +1,26 @@
-!#/bin/bash
+#!/bin/bash
 
-
+affichage()
+{
+clear
+echo "Menu trop awesome"
+echo "a- Afficher le contenu du répertoire /root"
+echo "b- Afficher le contenu du fichier /etc/passwd"
+echo "q- Quitter"
+echo -n "Choix : "
+}
+choix="1"
+until test $choix = "q"
+do
+	affichage
+	read choix
+	if test $choix = a -o $choix = A 
+	then
+		sudo ls -la /root
+		sleep 5
+	elif test $choix = b -o $choix = B
+	then
+		cat /etc/passwd
+		sleep 5
+	fi
+done
