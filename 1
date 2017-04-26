@@ -1,0 +1,18 @@
+#!/bin/bash
+
+type=`file $1 | grep -c sticky`
+if test $type = 0
+then
+	type=`file $1 | grep -c  ASCII`
+	if test $type = 0
+	then
+		clear
+		echo "non-existant"
+	else
+		clear
+		echo "Fichier"
+	fi
+else
+	clear
+	echo "Dossier"
+fi
